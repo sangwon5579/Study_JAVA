@@ -31,6 +31,7 @@ public class A_Variable {
         //System.out.println(isTrue);
 
         isTrue = true;
+        //isTrue = 1; -> 에러
         System.out.println(isTrue);
 
     }

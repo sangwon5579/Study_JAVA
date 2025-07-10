@@ -9,6 +9,13 @@ public class Application {
     //main 메소드
     //프로젝트의 시작점. java.exe가 Application.class를 실행시킬 때 제일 먼저 실행되는 메소드.
     public static void main(String[] args) {
+        //main 메소드에 A_Variable 클래스에 variableTest 메소드를 호출(실행)
+        // 1) 실행할 메소드가 있는 클래스를 생성(new) 해야한다
+        //[표현법]
+        //  클래스명 변수명(이름) = new 클래스명();
+
+        // 1-1) import 문을 사용하지 않고 클래스 생성
+        com.beyond.variable.practice.A_Variable variable = new com.beyond.variable.practice.A_Variable();
         System.out.println("Hello World");
     }
 }
