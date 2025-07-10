@@ -25,7 +25,30 @@ public class A_Variable {
         double dNum;        //8byte의 실수를 담을 수 있는 변수를 선언한다.
 
         //문자형
-        char ch;            //2byte의 문자(유니코드)를 담을 수 있는 변수를 선언한다.
+        char ch = 'A';      //2byte의 문자(유니코드)를 담을 수 있는 변수를 선언한다.
+                            //문자 하나만 넣을 수 있음. A, a, 가, @
+        System.out.println(ch);
+
+        char ch2  = 97;
+        System.out.println(ch2); //a 출력. 코드값 주는 것도 가능. 음수값은 불가능. 0~65535(유니코드)
+        char ch3 = 65535;
+        System.out.println(ch3); //유니코드는 전세계 모든 언어에 대한 코드값.
+
+        ///char ch4 = ''; //error. 빈문자열 불가능.
+        char ch4 = 0; //빈문자열
+        System.out.println(ch4);
+
+        char ch5 = '\u0000';
+        System.out.println(ch5); //빈문자열
+        System.out.println();
+
+        //문자열
+        //String name = '홍길동'; //error
+        String name = "홍길동";
+        String name2 = ""; //빈문자열 가능
+        System.out.println(name);
+        System.out.println(name2);
+        System.out.println();
 
         //지역 변수를 선언 후 초기화가 되지 않은 경우 에러 발생
         //System.out.println(isTrue);
@@ -44,8 +67,20 @@ public class A_Variable {
         iNum = 2147483647;
         System.out.println(iNum);
 
-        lNum = 2147483647;
-        lNum = 2147483647345L;
+        //long 타입의 리터럴은 숫자 뒤에 L을 입력.
+        //lNum = 9223372036854775807;
+        lNum = 9223372036854775807L;
+        System.out.println(lNum);
+        System.out.println();
 
+        //float 타입의 리터럴은 숫자 뒤에 F or f를 입력.
+        fNum = 3.141592F;
+        System.out.println(fNum);
+
+        //double 타입의 리터럴은 숫자 뒤에 D or d를 입력해도 되지만 생략 가능. 기본이 double이니깐.
+        dNum = 3.141592;
+        System.out.println(dNum);
+        System.out.println();
+        System.out.println();
     }
 }
