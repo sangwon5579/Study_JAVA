@@ -44,7 +44,8 @@ public class A_Variable {
 
         //문자열
         //String name = '홍길동'; //error
-        String name = "홍길동";
+        //String name = "홍길동";
+        String name = new String("홍길동");
         String name2 = ""; //빈문자열 가능
         System.out.println(name);
         System.out.println(name2);
