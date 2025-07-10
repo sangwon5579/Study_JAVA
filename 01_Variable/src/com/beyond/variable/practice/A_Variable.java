@@ -30,9 +30,22 @@ public class A_Variable {
         //지역 변수를 선언 후 초기화가 되지 않은 경우 에러 발생
         //System.out.println(isTrue);
 
-        isTrue = true;
+        isTrue = false;
         //isTrue = 1; -> 에러
         System.out.println(isTrue);
+        System.out.println();
+
+        bNum = 127;
+        System.out.println(bNum);
+
+        sNum = 32767;
+        System.out.println(sNum);
+
+        iNum = 2147483647;
+        System.out.println(iNum);
+
+        lNum = 2147483647;
+        lNum = 2147483647345L;
 
     }
 }

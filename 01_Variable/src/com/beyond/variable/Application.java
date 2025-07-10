@@ -4,6 +4,8 @@
 package com.beyond.variable;
 //블록 주석 : 컨트롤 + /
 
+import com.beyond.variable.practice.A_Variable;
+
 //클래스의 이름은 java 파일의  이름과 동일
 public class Application {
     //main 메소드
@@ -15,7 +17,14 @@ public class Application {
         //  클래스명 변수명(이름) = new 클래스명();
 
         // 1-1) import 문을 사용하지 않고 클래스 생성
-        com.beyond.variable.practice.A_Variable variable = new com.beyond.variable.practice.A_Variable();
-        System.out.println("Hello World");
+        //com.beyond.variable.practice.A_Variable variable = new com.beyond.variable.practice.A_Variable();
+
+        // 1-2) import 문을 사용해서 클래스 생성
+        A_Variable variable = new A_Variable();
+
+        // 2) 생성한 클래스로 메소드 호출(실행)
+        // [표현법]
+        //  변수명.메소드명();
+        variable.variableTest();
     }
 }
