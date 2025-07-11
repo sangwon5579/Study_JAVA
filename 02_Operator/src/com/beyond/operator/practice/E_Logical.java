@@ -25,10 +25,22 @@ public class E_Logical {
         //&& 연산자를 기준으로 앞에서 False가 나왔기 때문에 뒤의 연산은 수행하지 않는다
         System.out.println("result : " + result);
         System.out.println("&& 연산 후 number : "+ number);
+        System.out.println();
         /*
         && 연산 전 number : 10
         result : false
         && 연산 후 number : 10
+         */
+
+        System.out.println("|| 연산 전 number : "+ number);
+        result = ((number < 20) || (++number > 0));
+        // || 연산자를 기준으로 앞에서 이미 true가 나왔기 때문에 뒤의 연산은 수행하지 않는다.
+        System.out.println("result : " + result);
+        System.out.println("|| 연산 후 number : "+ number);
+        /*
+        || 연산 전 number : 10
+        result : true
+        || 연산 후 number : 10
          */
     }
 }
