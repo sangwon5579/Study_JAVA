@@ -152,7 +152,12 @@ public class A_Variable {
     public void casting() {
         double dNum = 4.23456789;
         float fNum = (float)dNum;
+        int iNum = (int) fNum;
         System.out.println(dNum);
         System.out.println(fNum);
+        System.out.println(iNum);
+        System.out.println((byte) 289);
+        System.out.println((int) (iNum + dNum));
+        System.out.println(iNum + (int) dNum);
     }
 }
