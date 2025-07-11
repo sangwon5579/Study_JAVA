@@ -32,6 +32,5 @@ public class D_Comparison {
         else{
             System.out.println("홀수");
         }
-
     }
 }
