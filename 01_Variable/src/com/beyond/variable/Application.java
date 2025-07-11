@@ -5,6 +5,8 @@ package com.beyond.variable;
 //블록 주석 : 컨트롤 + /
 
 import com.beyond.variable.practice.A_Variable;
+import com.beyond.variable.practice.B_ConsoleOutput;
+import com.beyond.variable.practice.C_ConsoleInput;
 
 //클래스의 이름은 java 파일의  이름과 동일
 public class Application {
@@ -21,6 +23,7 @@ public class Application {
 
         // 1-2) import 문을 사용해서 클래스 생성
         A_Variable variable = new A_Variable();
+        B_ConsoleOutput output = new B_ConsoleOutput();
 
         // 2) 생성한 클래스로 메소드 호출(실행)
         // [표현법]
@@ -32,5 +35,13 @@ public class Application {
 
         System.out.println("==========================");
         variable.casting();
+
+        System.out.println("==========================");
+        System.out.println("==========================");
+        output.valuePrint();
+
+        System.out.println("==========================");
+        System.out.println("==========================");
+        new C_ConsoleInput().keyboardInput();
     }
 }
