@@ -11,5 +11,19 @@ public class C_Arithmetic {
         System.out.println(number1/number2);
         System.out.println(number1%number2);
         System.out.println();
+
+        double number3 =10.0;
+        double number4 = 3.0;
+        System.out.println(number3+number4);
+        System.out.println(number3-number4);
+        System.out.println(number3*number4);
+        System.out.println(number3/number4);
+        System.out.println(number3%number4);
+        System.out.println();
+
+        char ch = '홍';
+        System.out.println(ch+1);
+        System.out.println((char)(ch+1));
+        System.out.println('a'+'b');
     }
 }
