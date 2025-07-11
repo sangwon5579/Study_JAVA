@@ -25,5 +25,11 @@ public class C_Arithmetic {
         System.out.println(ch+1);
         System.out.println((char)(ch+1));
         System.out.println('a'+'b');
+        System.out.println();
+
+        System.out.println(5.0 / 0);    //Infinity
+        System.out.println(5.0 % 0);    //NaN (NOt A Number)
+        System.out.println(Double.isInfinite(5.0/0));   //연산 결과가 Infinity 인지 검사
+        System.out.println(Double.isNaN(5.0%0));        //연산 결과가 NaN인지 검사
     }
 }

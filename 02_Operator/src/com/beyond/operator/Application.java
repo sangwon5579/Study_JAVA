@@ -3,6 +3,7 @@ package com.beyond.operator;
 import com.beyond.operator.practice.A_logicalNegation;
 import com.beyond.operator.practice.B_inDecrease;
 import com.beyond.operator.practice.C_Arithmetic;
+import com.beyond.operator.practice.D_Comparison;
 
 public class Application {
     public static void main(String[] args) {
@@ -15,5 +16,9 @@ public class Application {
         b.method2();
         System.out.println("+++++++++++++");
         new C_Arithmetic().method1();
+        System.out.println("+++++++++++++");
+        new D_Comparison().method1();
+        System.out.println("+++++++++++++");
+        new D_Comparison().method2();
     }
 }
