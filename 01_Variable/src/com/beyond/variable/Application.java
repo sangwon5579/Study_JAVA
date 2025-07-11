@@ -26,5 +26,8 @@ public class Application {
         // [표현법]
         //  변수명.메소드명();
         variable.variableTest();
+
+        System.out.println("==========================");
+        variable.autoCasting();
     }
 }

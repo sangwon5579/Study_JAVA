@@ -50,6 +50,11 @@ public class A_Variable {
         System.out.println(name);
         System.out.println(name2);
         System.out.println();
+        String name3 = null;//String은 아무것도 참조하지 않는다는 의미로 null로 초기화가 가능
+        System.out.println(name3);
+
+        System.out.println(name.charAt(0));
+        System.out.println(name.charAt(1));
 
         //지역 변수를 선언 후 초기화가 되지 않은 경우 에러 발생
         //System.out.println(isTrue);
@@ -83,5 +88,54 @@ public class A_Variable {
         System.out.println(dNum);
         System.out.println();
         System.out.println();
+
+
+        //final 변수
+        //  [료현법]
+        //    final 자료형 변수명;
+        //  - 특정 변수의 값이 변경되는 걸 원하지 않을 때 사용
+        //  - 초기화 이후에는 값을 변경할 수 없다.
+        int age = 10;
+        final int Age = 20;
+        System.out.println(age);
+        System.out.println(Age);
+    }
+
+    /*
+    자동 형젼환
+    데이터 표현 범위가 작은 자료형을 큰 자료형으로 변환한다.
+     */
+    public void autoCasting(){
+        byte bNum = 10;
+        short sNum = 12;
+        int iNum = sNum; //short -> int 자동 형 변환된다.
+        long lNum = iNum; //int -> long
+        float fNum = lNum; //float 타입이 long 타입보다 표현 가능한 수의 범위가 더 크기 때문에 자동 형 변환된다.
+        double dNum = fNum; //float -> double
+
+        System.out.println(bNum);
+        System.out.println(sNum);
+        System.out.println(iNum);
+        System.out.println(lNum);
+        System.out.println(fNum);
+        System.out.println(dNum);
+        System.out.println();
+
+        char ch = 'A';
+        iNum = ch;
+        //char 타입의 변수는 음수가 저장될 수 없기 때문에
+        //byte 타입의 값을 char 타입으로 자동 형 변환 시킬수 없다.
+        System.out.println(ch);
+        System.out.println(iNum);
+        System.out.println((char)iNum);
+        System.out.println();
+
+        double result = 12 + 3.3; //12.0 + 3.3 = 15.3
+
+        //byte, short 타입의 데이터 연산 시 무조건 int 타입으로 변환 후 처리한다ㅣ
+        int result2 = bNum + sNum;
+
+        byte result3 = 10 + 12;
+        long result4 = 30 + 30;
     }
 }
