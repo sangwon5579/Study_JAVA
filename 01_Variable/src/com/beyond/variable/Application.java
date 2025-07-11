@@ -29,5 +29,8 @@ public class Application {
 
         System.out.println("==========================");
         variable.autoCasting();
+
+        System.out.println("==========================");
+        variable.casting();
     }
 }

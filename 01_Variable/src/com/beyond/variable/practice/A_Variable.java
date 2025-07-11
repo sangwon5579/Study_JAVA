@@ -136,6 +136,23 @@ public class A_Variable {
         int result2 = bNum + sNum;
 
         byte result3 = 10 + 12;
-        long result4 = 30 + 30;
+        long result4 = 30 + 30; //30+30=60을 long 타입으로
+        System.out.println(result);
+        System.out.println(result2);
+        System.out.println(result3);
+        System.out.println(result4);
+    }
+
+    /*
+    강제 형변환
+    데이터 표현 범위가 큰 자료형을 작은 자료형으로 변환하한다
+        [표현법]
+            (자료형)데이터;
+    */
+    public void casting() {
+        double dNum = 4.23456789;
+        float fNum = (float)dNum;
+        System.out.println(dNum);
+        System.out.println(fNum);
     }
 }
