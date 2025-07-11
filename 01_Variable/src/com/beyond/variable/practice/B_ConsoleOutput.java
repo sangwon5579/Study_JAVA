@@ -29,6 +29,6 @@ public class B_ConsoleOutput {
         System.out.printf("%d + %d = %d\n", 100, 200, (100+200));
         System.out.printf("%f\t%f\n", 3.141592, 4.14159);
         System.out.printf("%.2f\t%.3f\n", 3.141592, 4.14159);
-        System.out.printf("%c %s\n", 'A', "\"helllllooo\"");
+        System.out.printf("%c %s\n", 'A', "\"hellooooooo\"");
     }
 }
