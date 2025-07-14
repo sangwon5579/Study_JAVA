@@ -63,6 +63,7 @@ public class H_OperatorPractice {
         }
         System.out.println();
     }
+
     public void practice5(){
         Scanner scanner = new Scanner(System.in);
         System.out.print("하나의 정수를 입력하시오.. > ");
@@ -73,7 +74,9 @@ public class H_OperatorPractice {
         else{
             System.out.println("홀수이다");
         }
+        System.out.println();
     }
+
     public void practice6(){
         Scanner scanner = new Scanner(System.in);
         System.out.print("사람수를 입력하시오 : ");
@@ -81,30 +84,56 @@ public class H_OperatorPractice {
         Scanner scanner1 = new Scanner(System.in);
         System.out.print("사탕 수를 입력하시오 : ");
         int candy = scanner1.nextInt();
-        int result1 = people / candy;
-        int result2 = people % candy;
+        int result1 = candy / people;
+        int result2 = candy % people;
         System.out.println("1인당 소유 사탕 개수 : " + result1);
         System.out.println("남은 사탕 개수 : " + result2);
+        System.out.println();
     }
     public void practice7(){
         Scanner scanner1 = new Scanner(System.in);
-        System.out.println("국어 점수 입력 : ");
+        System.out.print("국어 점수 입력 : ");
         int korean = scanner1.nextInt();
         Scanner scanner2 = new Scanner(System.in);
-        System.out.println("영어 점수 입력 : ");
+        System.out.print("영어 점수 입력 : ");
         int eng = scanner2.nextInt();
         Scanner scanner3 = new Scanner(System.in);
-        System.out.println("수학 점수 입력 : ");
+        System.out.print("수학 점수 입력 : ");
         int math = scanner3.nextInt();
         int sum = korean + eng + math;
         int avg = (korean + eng + math) / 3;
         System.out.println("합계 점수 : " + sum);
         System.out.println("평균 : " + avg);
+        System.out.println();
     }
     public void practice8(){
-        
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("주민 번호 입력 > ");
+        String number =  scanner.next();
+        int gender = number.charAt(7);
+        if (gender == '1' || gender == '3'){
+            System.out.println("남자");
+        }
+        else{
+            System.out.println("여자");
+        }
+        System.out.println();
     }
     public void practice9(){
-
+        Scanner num1 = new Scanner(System.in);
+        System.out.print("첫번쨰 수 : ");
+        int number1 = num1.nextInt();
+        Scanner num2 = new Scanner(System.in);
+        System.out.print("두번째 수 : ");
+        int number2 = num2.nextInt();
+        Scanner num3 = new Scanner(System.in);
+        System.out.print("세번째 수 : ");
+        int number3 = num3.nextInt();
+        if(number1 == number2 && number2 == number3){
+            System.out.println("TRUE");
+        }
+        else{
+            System.out.println("FALSE");
+        }
     }
 }

@@ -38,6 +38,11 @@ public class Application {
         new H_OperatorPractice().practice2();
         new H_OperatorPractice().practice3();
         new H_OperatorPractice().practice4();
+        new H_OperatorPractice().practice5();
+        new H_OperatorPractice().practice6();
+        new H_OperatorPractice().practice7();
+        new H_OperatorPractice().practice8();
+        new H_OperatorPractice().practice9();
 
     }
 }
