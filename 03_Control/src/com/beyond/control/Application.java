@@ -3,6 +3,7 @@ package com.beyond.control;
 import com.beyond.control.practice.A_If;
 import com.beyond.control.practice.B_Switch;
 import com.beyond.control.practice.C_For;
+import com.beyond.control.practice.D_While;
 
 public class Application {
     public static void main(String[] args) {
@@ -14,6 +15,9 @@ public class Application {
         //new B_Switch().method2();
         //new B_Switch().practice();
         //new C_For().method1();
-        new C_For().method2();
+        //new C_For().method2();
+        //new C_For().method3();
+        //new D_While().method1();
+        new D_While().method2();
     }
 }
