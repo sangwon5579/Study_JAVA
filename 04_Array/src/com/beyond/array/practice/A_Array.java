@@ -116,19 +116,13 @@ public class A_Array {
     }
 
     public void practice2() {
-        Scanner scanner1 = new Scanner(System.in);
-        System.out.print("키 입력 > ");
-        double hight1 = scanner1.nextDouble();
-        Scanner scanner2 = new Scanner(System.in);
-        System.out.print("키 입력 > ");
-        double hight2 = scanner2.nextDouble();
-        Scanner scanner3 = new Scanner(System.in);
-        System.out.print("키 입력 > ");
-        double hight3 = scanner3.nextDouble();
+        Scanner scanner = new Scanner(System.in);
         double avg = 0.0;
         double sum = 0.0;
-        double[] arr = new double[] {hight1, hight2, hight3};
+        double[] arr = new double[3];
         for(int i = 0 ; i < arr.length; i++){
+            System.out.print("키 입력 > ");
+            arr[i] = scanner.nextDouble();
             sum += arr[i];
             avg += arr[i];
         }
