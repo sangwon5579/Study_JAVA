@@ -24,13 +24,30 @@ public class D_While {
     public void method2(){
         String str = "";
         Scanner scanner=new Scanner(System.in);
+        /*
         while(true){
             System.out.print("입력 : ");
-            str=scanner.next();
+            str=scanner.nextLine();
             System.out.println(str);
             if(str.equals("exit")){
-                return;
+                System.out.println("프로그램  종료");
+                break;
             }
         }
+         */
+        /*
+        while(!str.equals("exit")){
+            System.out.print("입력 : ");
+            str=scanner.nextLine();
+            System.out.println(str);
+        }
+        System.out.println("종료");
+    */
+        do {
+            System.out.print("입력 : ");
+            str=scanner.nextLine();
+            System.out.println(str);
+        }while(!str.equals("exit"));
+        System.out.println("종료");
     }
 }
