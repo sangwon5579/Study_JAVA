@@ -1,0 +1,139 @@
+package com.beyond.array.practice;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class A_Array {
+    //배열의 선언, 생성, 초기화(new)
+    public void method1(){
+        int[] iArray1 = new int[5];
+        int iArray2[];
+        iArray2 = new int[10];
+
+        //초기화(값 저장)
+        iArray1[0] = 2;
+        iArray1[1] = 4;
+        iArray1[2] = 6;
+        iArray1[3] = 8;
+        iArray1[4] = 10;
+
+        //출력
+        /*System.out.println(iArray1[0]);
+        System.out.println(iArray1[1]);
+        System.out.println(iArray1[2]);
+        System.out.println(iArray1[3]);
+        System.out.println(iArray1[4]);*/
+
+        //반복문
+        /*for(int i = 0; i<iArray1.length; i++){
+            System.out.println(iArray1[i]);
+        }*/
+
+        /*for(int value : iArray1){
+            System.out.println(value);
+        }*/
+
+        //Arrays 클래스와 toString() 메소드
+        System.out.println(Arrays.toString(iArray1));
+
+        //배열을 생성하고 초기화하지 않는다면, JVM이 지정한 기본값으로 배열이 초기화됨
+        //정수형 : 0 , 실수형 : 0.0 , 문자형 : \u00000 , 논리형 : false , 참조형 : null
+        System.out.println(Arrays.toString(iArray2));
+    }
+
+    //배열의 선언, 생성, 초기화(값의 목록)
+    public void method2(){
+        int[] iArray = new int[] {1,2,3,4,5};
+        double[] dArray = {1.1, 2.2, 3.3, 4.4};
+
+        System.out.println(iArray.length);
+        System.out.println(Arrays.toString(iArray));
+        System.out.println();
+        System.out.println(dArray.length);
+        System.out.println(Arrays.toString(dArray));
+        System.out.println();
+
+        //dArray = {5.5, 6.6, 7.7, 8.8};
+        dArray = new double[] {5.5, 6.6, 7.7, 8.8, 9.9};
+        System.out.println(dArray.length);
+        System.out.println(Arrays.toString(dArray));
+        System.out.println();
+    }
+
+    //문자열 배열. 입력 받은 후 출력
+    public void method3(){
+        String[] fruits = new String[3];
+        Scanner scanner = new Scanner(System.in);
+
+        for (int i=0; i<fruits.length; i++){
+            System.out.print("과일 입력 > ");
+            fruits[i] = scanner.next();
+        }
+        System.out.println(Arrays.toString(fruits));
+    }
+
+    //배열의 정렬
+    public void method4(){
+        int[] iArray = {2,7,5,1,3};
+        String[] sArray = {"메론", "orange", "Apple", "banana", "apple", "레몬", "apeach"};
+        System.out.println(Arrays.toString(iArray));
+        System.out.println(Arrays.toString(sArray));
+        System.out.println();
+
+        //오름차순 정렬
+        Arrays.sort(iArray);    //[1, 2, 3, 5, 7]
+        Arrays.sort(sArray);    //[Apple, apeach, apple, banana, orange, 레몬, 메론]
+        System.out.println(Arrays.toString(iArray));
+        System.out.println(Arrays.toString(sArray));
+        System.out.println();
+
+        //내림차순 정렬
+        //원본 배열을 오름차순으로 정렬한 다음 값을 반대로 새로운 배열에 대입한다.
+        int[] copy = new int[iArray.length];
+
+        for(int i = 0; i < iArray.length; i++){
+            copy[4-i] = iArray[i];
+        }
+
+        System.out.println(Arrays.toString(copy));
+
+        Arrays.sort(sArray, Collections.reverseOrder());
+        System.out.println(Arrays.toString(sArray));
+
+    }
+
+    public void practice1() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("정수값 입력 > ");
+        int n = scanner.nextInt();
+        int[] number = new int[n];
+        for(int i = 0 ; i < n; i++){
+            number[i] = (int) (Math.random()*100 + 1);
+            System.out.printf("number[%d] : %d\n", i, number[i]);
+        }
+        System.out.println();
+    }
+
+    public void practice2() {
+        Scanner scanner1 = new Scanner(System.in);
+        System.out.print("키 입력 > ");
+        double hight1 = scanner1.nextDouble();
+        Scanner scanner2 = new Scanner(System.in);
+        System.out.print("키 입력 > ");
+        double hight2 = scanner2.nextDouble();
+        Scanner scanner3 = new Scanner(System.in);
+        System.out.print("키 입력 > ");
+        double hight3 = scanner3.nextDouble();
+        double avg = 0.0;
+        double sum = 0.0;
+        double[] arr = new double[] {hight1, hight2, hight3};
+        for(int i = 0 ; i < arr.length; i++){
+            sum += arr[i];
+            avg += arr[i];
+        }
+        avg = avg / arr.length;
+        System.out.printf("총합 : %.1f\n", sum);
+        System.out.printf("평균 : %.1f\n", avg);
+    }
+}
