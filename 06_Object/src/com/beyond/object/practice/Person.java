@@ -11,7 +11,10 @@ package com.beyond.object.practice;
 public class Person {
     // 1. 필드(속성) 정의
     private String name;
+
     private int age;
+
+    private Phone phone = new Phone();
 
     // 2. 생성자 정의
 
@@ -29,7 +32,14 @@ public class Person {
         this.age = age;
     }
 
+    public void setPhone(String name, String color, String brand) {
+        phone.setName(name);
+        phone.setColor(color);
+        phone.setBrand(brand);
+    }
+
     public void whoAreYou(){
         System.out.printf("안녕하세요 저는 %s입니다. 나이는 %d세 입니다 \n",name,age);
+            System.out.printf("핸드폰 : %s, 색상 : %s, 브랜드 : %s\n", phone.getName(),phone.getColor(),phone.getBrand());
     }
 }
