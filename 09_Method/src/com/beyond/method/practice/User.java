@@ -1,0 +1,29 @@
+package com.beyond.method.practice;
+
+public class User {
+    private String id;
+
+    private String password;
+
+    private String name;
+
+    public User(String id, String password, String name) {
+
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String information(){
+        return String.format("id: %s, password: %s, name: %s", id, password, name);
+    }
+}
