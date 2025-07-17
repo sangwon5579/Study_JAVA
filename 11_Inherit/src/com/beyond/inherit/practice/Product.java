@@ -1,13 +1,13 @@
 package com.beyond.inherit.practice;
 
-public class Product {
-    private String code; //상품 코드
+public class Product {              //extends Object가 생략되어 있음
+    protected String code; //상품 코드
 
-    private String name; //상품 이름
+    protected String name; //상품 이름
 
-    private String brand; //브랜드
+    protected String brand; //브랜드
 
-    private int price; //상품 가격
+    protected int price; //상품 가격
 
     public Product() {
         System.out.println("부모 클래스의 기본 생성자 호출");
@@ -53,6 +53,6 @@ public class Product {
     }
 
     public String information(){
-        return String.format("code: %s, name : %s, brand : %s, price : %d\n", code, name, brand, price);
+        return String.format("code: %s, name : %s, brand : %s, price : %d", code, name, brand, price);
     }
 }

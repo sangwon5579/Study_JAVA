@@ -9,7 +9,21 @@ public class Desktop extends Product{
     }
 
     public Desktop(String code, String name, String brand, int price, boolean allInOne) {
+        // 부모 필드를 초기화할 수 있는 방법
+        // 1) 부모의 생성자를 호출해서 초기화
         super(code, name, brand, price);
+
+        // 2) 부모의 Setter 메소드를 호출해서 초기화
+//        this.setCode(code);
+//        this.setName(name);
+//        setBrand(brand);
+//        super.setPrice(price);
+
+        // 3) 부모의 필드에 직접 접근해서 초기화 (protected 접근 제한자 사용)
+//        this.code = code;
+//        this.name = name;
+//        super.price = price;
+
         this.allInOne = allInOne;
     }
 
@@ -19,5 +33,11 @@ public class Desktop extends Product{
 
     public void setAllInOne(boolean allInOne) {
         this.allInOne = allInOne;
+    }
+
+    @Override
+    public String information(){
+        return String.format("%s, %b\n",super.information(),allInOne);
+//        return super.information() + ", allInOne : " + allInOne;
     }
 }
