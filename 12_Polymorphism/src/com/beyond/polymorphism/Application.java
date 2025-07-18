@@ -2,6 +2,7 @@ package com.beyond.polymorphism;
 
 import com.beyond.polymorphism.practice.Desktop;
 import com.beyond.polymorphism.practice.Product;
+import com.beyond.polymorphism.practice.SmartPhone;
 import com.beyond.polymorphism.practice.Television;
 
 public class Application {
@@ -27,5 +28,60 @@ public class Application {
         System.out.println(television);
         // 다시 Television 클래스의 맴버에 접근하고 싶으면 형 변환을 해야한다.
         System.out.println(((Television)television).getInch());
+
+        // 4. 배열과 다형성
+        // 1) 다형성을 적용하기 전
+        Desktop[] desktops = new Desktop[2];
+        desktops[0] = new Desktop();
+        desktops[1] = new Desktop();
+
+        SmartPhone[] smartPhones = {
+                new SmartPhone(),
+                new SmartPhone(),
+        };
+
+        // 2) 다형성을 적용한후
+        Product[] products = {
+                new Desktop(),
+                new Desktop(),
+                new SmartPhone(),
+                new SmartPhone(),
+                new Television()
+        };
+
+        for(Product p : products){
+            System.out.println(p);
+
+            if(p instanceof Desktop){
+                System.out.println(((Desktop)p).isAllInOne());
+            }
+            else if(p instanceof SmartPhone){
+                System.out.println(((SmartPhone) p ).getMobileAgency());
+            }
+            else if (p instanceof Television){
+                System.out.println(((Television) p).getInch());
+            }
+
+            System.out.println();
+        }
+
+        // 5. 매개변수의 다형성
+        productInfo(new Desktop());
+        productInfo(new SmartPhone());
+        productInfo(new Television());
+    }
+//    public static void productInfo(Desktop desktop){
+//        System.out.println(desktop);
+//    }
+//
+//    public static void productInfo(SmartPhone smartPhone){
+//        System.out.println(smartPhone);
+//    }
+//
+//    public static void productInfo(Television television){
+//        System.out.println(television);
+//    }
+    public static void productInfo(Product product){
+        System.out.println(product);
     }
 }
