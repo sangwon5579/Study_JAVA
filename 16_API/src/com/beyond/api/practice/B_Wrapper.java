@@ -52,4 +52,35 @@ public class B_Wrapper {
         System.out.println(dNumber1 == dNumber2);   //true
         System.out.println();
     }
+
+    //String과 Wrapper 클래스간의 변경
+    public void method2(){
+        // 1. 문자열을 기본 자료형으로 변경 (Wrapper 클래스의 parseXXX() 메소드 사용)
+        int iNumber = Integer.parseInt("10");
+        //int iNumber = Integer.parseInt("10.3"); //에러 발생
+        double dNumber = Double.parseDouble("3.14");
+        //double dNumber = Double.parseDouble("10"); //가능. 에러 발생 X. 10.0
+
+        System.out.println(iNumber);                //10
+        System.out.println(dNumber);                //3.14
+        System.out.println(dNumber == iNumber);     //false
+        System.out.println();
+
+        // 2. 기본 자료형을 문자열로 변경
+        // 1) String 클래스의 valueOf() 메소드 사용
+//        String str1 = String.valueOf(10);
+//        String str2 = String.valueOf(3.14);
+
+        // 2) Wrapper  클래스의 valueOf() 메소드 사용
+//        String str1 = Integer.valueOf(10).toString();
+//        String str2 = Double.valueOf(3.14).toString();
+//
+//        System.out.println(str1);           //10
+//        System.out.println(str2);           //3.14
+//        System.out.println(str1 + str2);    //103.14
+
+
+
+
+    }
 }
