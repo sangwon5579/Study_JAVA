@@ -55,4 +55,22 @@ public class A_HashSet {
         set.iterator().forEachRemaining(s -> System.out.println(s));
         set.iterator().forEachRemaining(System.out::println);
     }
+
+    public void method2(){
+        Set<Music> musics = new HashSet<>();
+
+        musics.add(new Music("뛰어", "BlackPink",1));
+        musics.add(new Music("뛰어", "BlackPink",1));
+        musics.add(new Music("Dirty Work", "aespa",3));
+        musics.add(new Music("Dirty Work", "aespa",3));
+        musics.add(new Music("빌려온 고양이", "아일릿",6));
+        musics.add(new Music("너에게 닿기를", "10cm",5));
+        musics.add(new Music("시작의 아이", "마크룹",4));
+        musics.add(new Music("시작의 아이", "마크룹",4));
+        musics.add(new Music("눈물참기", "QWER",2));
+
+        for(Music music: musics){
+            System.out.println(music);
+        }
+    }
 }
