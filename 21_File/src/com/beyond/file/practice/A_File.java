@@ -14,10 +14,47 @@ public class A_File {
 
         try {
             File file = new File("test.txt");   //메모리상에만 존재하는 객체
-            file.createNewFile();   //실제 파일이 만들어진다
+//            File file = new File("C:\\Users\\chosw\\OneDrive\\바탕 화면\\beyond_java\\test.txt");
+            System.out.printf("파일 이름 : %s\n", file.getName());
+            System.out.printf("파일 경로 : %s\n", file.getAbsolutePath());
+            System.out.printf("파일 용량 : %s\n", file.length());
+            System.out.printf("파일 존재 여부 : %b\n", file.exists());
+            System.out.printf("파일 여부 : %b\n", file.isFile());
+            System.out.printf("디렉터리 여부 : %b\n", file.isDirectory());
+            if(file.exists()){
+                file.delete();          //파일 or 디렉터리 삭제
+            }
+            else{
+                file.createNewFile();   //파일 생성
+            }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
 
+    }
+
+    public void method2(){
+//        File file = new File("C:/Users/chosw/OneDrive/바탕 화면/beyond_java/temp/demo/demo.txt");
+        try {
+            boolean result = false;
+//            File temp = new File("C:/Users/chosw/OneDrive/바탕 화면/beyond_java/temp");
+            File demo = new File("C:/Users/chosw/OneDrive/바탕 화면/beyond_java/temp/demo");
+            File file = new File("C:/Users/chosw/OneDrive/바탕 화면/beyond_java/temp/demo/demo.txt");
+
+            if(!demo.exists()){
+                result = demo.mkdirs(); //경로상에 없는 모든 폴더(이렉터리)를 생성하는 메소드
+            }
+            System.out.printf("폴더 생성 여부 : %b\n", result);
+
+            if(!file.exists()){
+                result = file.createNewFile();
+            }
+            System.out.printf("파일 생성 여부 : %b\n", result);
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
