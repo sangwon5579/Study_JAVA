@@ -10,8 +10,14 @@ public class D_ObjectStream {
             e.printStackTrace();
         }
     }
-    public void fileRead(){
-        try(ObjectInputStream ois = new O)
+    public void fileRead() {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("c_object.dat"))) {
 
+            Member member = (Member) ois.readObject();
+
+            System.out.println(member);
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }

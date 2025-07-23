@@ -21,6 +21,7 @@ public class Application {
 
         //객체 입출력 보조 스트림
         new D_ObjectStream().fileSave();
+        new D_ObjectStream().fileRead();
         System.out.println("프로그램 종료");
     }
 }
