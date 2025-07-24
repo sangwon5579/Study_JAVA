@@ -22,13 +22,22 @@ package com.beyond.lambda;
 
 import com.beyond.lambda.practice.A_Lambda;
 import com.beyond.lambda.practice.B_FunctionalInterface;
+import com.beyond.lambda.practice.C_Consumer;
+import com.beyond.lambda.practice.D_Supplier;
 
 public class Application {
     public static void main(String[] args) {
         //람다식 테스트
 //        new A_Lambda().method1();
 
-        new B_FunctionalInterface().method1();
+        //함수적 인터페이스
+//        new B_FunctionalInterface().method1();
+//        new B_FunctionalInterface().method2();
+//        new B_FunctionalInterface().method3();
+//        new B_FunctionalInterface().method4(300);
 
+        //표준 함수적 인터페이스
+//        new C_Consumer().method1();
+        new D_Supplier().method1();
     }
 }
