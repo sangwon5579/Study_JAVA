@@ -34,9 +34,9 @@ public class C_Consumer {
         doubleConsumer.accept(3.14);
 
         //ObjIntConsumer<T>: T타입의 객체와 int 타입의 값을 받아서 소비한다
-//        ObjIntConsumer<String> objIntConsumer = (String str, int number){
-//            System.out.println("ObjIntConsumer");
-//            System.out.println("%s, %d\n", str,number);
-//            ObjIntConsumer.()
+        ObjIntConsumer<String> objIntConsumer =
+                (str, number) -> System.out.printf("%s %d\n", str, number);
+
+        objIntConsumer.accept("Java", 21);
     }
 }
