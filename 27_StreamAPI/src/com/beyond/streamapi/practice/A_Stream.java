@@ -1,6 +1,7 @@
 package com.beyond.streamapi.practice;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -42,5 +43,16 @@ public class A_Stream {
         //병렬로 처리. 데이터가 많으면 훨씬 빠르게 처리가 가능하다
         stream.parallel().forEach(str -> System.out.print(str + " "));
         System.out.println();
+    }
+
+    //컬렉션으로 스트림 생성
+    public void method3(){
+        List<String> names = Arrays.asList("홍길동", "이몽룡", "성춘향", "임꺽정", "성춘향");
+
+        Stream<String> stream = names.parallelStream();
+//        stream.forEach(s -> System.out.println(s + " "));
+        stream.forEach(System.out::println);
+        System.out.println();
+
     }
 }
