@@ -18,12 +18,15 @@ package com.beyond.lambda;
             (int a, int b) -> { return a + b; }
             (a, b) -> { return a + b; }
             (a, b) -> a + b;
+
+            메소드 참조
+                - 메소드를 참조해서 매개변수의 정보 및 리턴 타입을 알아내고, 람다식에서 불필요한 매개변수를 제거하는 것이 목적
+                - 자바 8부터 도입되어 기본 메소드나 생성자를 참조해서 함수적 인터페이스의 구현 객체를 생성한다
+
+
  */
 
-import com.beyond.lambda.practice.A_Lambda;
-import com.beyond.lambda.practice.B_FunctionalInterface;
-import com.beyond.lambda.practice.C_Consumer;
-import com.beyond.lambda.practice.D_Supplier;
+import com.beyond.lambda.practice.*;
 
 public class Application {
     public static void main(String[] args) {
@@ -38,6 +41,12 @@ public class Application {
 
         //표준 함수적 인터페이스
 //        new C_Consumer().method1();
-        new D_Supplier().method1();
+//        new D_Supplier().method1();
+//        new E_Function().method1();
+//        new F_Operator().method1();
+//        new G_Predicate().method1();
+
+        //메소드 참조
+        new H_MethodReference().method1();
     }
 }
