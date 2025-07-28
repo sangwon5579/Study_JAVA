@@ -122,26 +122,45 @@ public class SinglyLinkedList<E> implements List<E> {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
-        if (index == 0){
+        else if (index == 0){
             removeFirst();
-            return;
         }
-        if(index == (size-1)){
+        else if(index == (size-1)){
             removeLast();
-            return;
+        }
+        else{
+            Node<E> prevNode = search(index-1);
+            Node<E> targetNode = prevNode.next;
+            prevNode.next = targetNode.next;
+            targetNode.data = null;
+            targetNode.next = null;
+            size--;
         }
 
-        Node<E> prevNode = search(index-1);
-        Node<E> targetNode = prevNode.next;
-        prevNode.next = targetNode.next;
-        targetNode.data = null;
-        targetNode.next = null;
-        size--;
 
     }
 
     @Override
     public void remove(E element) {
+        Node<E> currentNode = head;
+        if (currentNode != null) {
+            if(currentNode.data.equals(element)){
+                removeFirst();
+            }
+            else{
+                for(int i = 0; i<size-1;i++){
+                    if(currentNode.next.data.equals(element)){
+                        Node<E> targetNode = currentNode.next;
+                        currentNode.next = targetNode.next;
+                        targetNode.data = null;
+                        targetNode.next = null;
+                        size--;
+                        break;
+                    }
+                    currentNode = currentNode.next;
+                }
+            }
+        }
 
     }
 

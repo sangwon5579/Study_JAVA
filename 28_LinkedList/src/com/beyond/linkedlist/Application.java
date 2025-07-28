@@ -99,5 +99,14 @@ public class Application {
         System.out.println(list);
         System.out.println(list.size());
         System.out.println();
+
+        System.out.println(list);
+        list.remove("포도");
+        list.remove("바나나");
+        list.remove("복숭아");
+        System.out.println(list);
+        System.out.println(list.size());
+        System.out.println();
+
     }
 }
