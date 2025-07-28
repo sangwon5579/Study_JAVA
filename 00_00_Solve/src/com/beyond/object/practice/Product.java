@@ -7,16 +7,22 @@ public class Product {
     private int price;
     private double tax;
 
-    public void Product(){
+    public Product(){
 
     }
 
-    public void Product(String id,String name,String site,int price,double tax){
-
+    public Product(String id, String name, String site, int price, double tax) {
+        this.id = id;
+        this.name = name;
+        this.site = site;
+        this.price = price;
+        this.tax = tax;
     }
+
+
 
     public String information(){
-        return null;
+        return id + ' ' + name + ' ' + site + ' ' + price + ' ' + tax;
     }
 
     public String getId() {
@@ -44,7 +50,7 @@ public class Product {
     }
 
     public int getPrice() {
-        return price;
+        return (int)((double)price + ((double)price * tax));
     }
 
     public void setPrice(int price) {
