@@ -20,6 +20,7 @@ public class Application {
         //최종 처리 메소드
 //        new E_Match().method1();
 //        new E_Match().method2();
-     new F_Aggregate().method1();
+//        new F_Aggregate().method1();
+        new G_Collect().method1();
     }
 }
