@@ -5,6 +5,7 @@ public interface Queue<E> {
     int size();
     boolean isEmpty();
     E dequeue();
-    boolean contains(E element);
     E peek();
+    boolean contains(E element);
+
 }

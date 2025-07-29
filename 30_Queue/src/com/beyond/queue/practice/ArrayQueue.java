@@ -69,13 +69,26 @@ public class ArrayQueue<E> implements Queue<E> {
     }
 
     @Override
-    public boolean contains(E element) {
-        return false;
+    @SuppressWarnings("unchecked")      //경고 무시
+    public E peek() {
+        if(isEmpty()){
+            throw new RuntimeException("Queue is empty");
+        }
+        return (E) elements[front];
     }
 
     @Override
-    public E peek() {
-        return null;
+    public boolean contains(E element) {
+        boolean result =false;
+        int front = this.front;
+        for (int i = 0; i < size; i++){
+            if(elements[front].equals(element)){
+                result = true;
+                break;
+            }
+            front = (front + 1) % maxSize;
+        }
+        return result;
     }
 
     @Override
