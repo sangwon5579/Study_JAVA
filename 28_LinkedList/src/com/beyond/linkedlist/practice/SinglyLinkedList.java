@@ -205,7 +205,7 @@ public class SinglyLinkedList<E> implements List<E> {
         private Node<E> next;
 
         // 노드 객체를 생성할 때 사용할 생성자
-        public Node(E data) {
+        private Node(E data) {
             this.data = data;
             this.next = null;
         }

@@ -54,12 +54,23 @@ public class ArrayStack<E> implements Stack<E> {
 
     @Override
     public boolean contains(E element) {
-        return false;
+        boolean result = false;
+        for(int i = 0; i <= top; i++){
+            if(elements[i].equals(element)){
+                return true;
+            }
+        }
+        return result;
     }
 
     @Override
     public E peek() {
-        return null;
+        if(isEmpty()){
+            throw new RuntimeException("스택 비어있음");
+        }
+        else{
+            return elements[top];
+        }
     }
 
     @Override
