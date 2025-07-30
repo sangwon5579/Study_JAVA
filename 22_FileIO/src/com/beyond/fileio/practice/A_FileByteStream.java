@@ -57,8 +57,6 @@ public class A_FileByteStream {
 //            System.out.println(Arrays.toString(buffer));
             //read() 메소드는 더 이상 읽어올 데이터가 없으면 -1을 리턴
 //            System.out.println(fis.read());
-
-
             int value = 0;
             while ((value = fis.read()) != -1) {
                 System.out.print((char)value);
