@@ -26,5 +26,12 @@ public class Application {
         ArraySort.mergeSort(numbers, 0, numbers.length-1);
         System.out.println(Arrays.toString(numbers));
         System.out.println();
+
+        //퀵정렬
+        numbers = new int[] {3, 1 ,5, 2, 9, 4};
+        System.out.println(Arrays.toString(numbers));
+        ArraySort.quickSort(numbers, 0, numbers.length-1);
+        System.out.println(Arrays.toString(numbers));
+        System.out.println();
     }
 }
