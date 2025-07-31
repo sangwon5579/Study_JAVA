@@ -24,6 +24,14 @@ public class MatrixGraph {
 //        this.matrix[dest][src] = weight;
     }
 
+    public void removeEdge(int src, int dest) {
+        //연결이 안된 꼭짓점들은 0으로 표현
+        this.matrix[src][dest] = 0;
+
+        //무방향 그래프일 경우
+//        this.matrix[dest][src] = 0;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -39,4 +47,6 @@ public class MatrixGraph {
         }
         return sb.toString();
     }
+
+
 }
