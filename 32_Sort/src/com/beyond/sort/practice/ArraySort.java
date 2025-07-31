@@ -98,7 +98,7 @@ public class ArraySort {
         //배열의 마지막 요소를 피벗으로 지정
         int pivot =  numbers[right];
 
-        //왼쪽 부분 배열의 시작 인덱스
+        //pivot보다 작은 값을 가지는 요소들의 시작 인덱스
         int i = left - 1;
 
         int temp;
